@@ -1,0 +1,3 @@
+[servers]
+ubuntu ansible_user=ubuntu ansible_host=54.167.218.146
+Amazon ansible_user=ec2-user ansible_host=98.93.115.5
