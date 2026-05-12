@@ -15,9 +15,7 @@
   notify: restart nginx
 
 - name: Update and upgrade amazon server
-  yum:
-    name: "*"
-    update_cache: yes
+  shell: sudo dnf update --skip-broken -y
   when: ansible_distribution == "Amazon"
 
 - name: install nginx on amazon server
@@ -26,4 +24,3 @@
     state: present
   when: ansible_distribution == "Amazon"
   notify: restart nginx
-
